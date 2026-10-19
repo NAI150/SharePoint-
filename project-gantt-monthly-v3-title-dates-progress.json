@@ -1,0 +1,1549 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json",
+  "hideSelection": true,
+  "hideColumnHeader": true,
+  "rowFormatter": {
+    "elmType": "div",
+    "style": {
+      "height": "=if(@rowIndex == 0, '104px', '52px')",
+      "display": "block",
+      "width": "100%",
+      "position": "relative"
+    },
+    "attributes": {
+      "class": "ms-bgColor-neutralLighter--hover"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "attributes": {
+          "class": "ms-bgColor-themePrimary"
+        },
+        "style": {
+          "width": "100%",
+          "display": "=if(@rowIndex == 0, 'flex', 'none')",
+          "height": "66px",
+          "padding": "0",
+          "font-weight": "bold",
+          "border-radius": "6px 6px 0 0",
+          "background-color": "#0f466a"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "txtContent": "工程 / 開始・終了",
+            "style": {
+              "width": "220px",
+              "text-align": "left",
+              "padding-left": "0.4em",
+              "box-sizing": "border-box",
+              "min-width": "220px",
+              "font-size": "13px"
+            },
+            "attributes": {
+              "class": "ms-fontSize-16 ms-fontColor-white"
+            }
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "flex-grow": "1",
+              "height": "66px",
+              "position": "relative",
+              "min-width": "0",
+              "overflow": "hidden"
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],0))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],0))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],0) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],0))) + '年' + toString(getMonth(addDays([$field_1],0)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],0))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],0) <= [$field_2] && true, 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],7))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],7))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],7) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],7))) + '年' + toString(getMonth(addDays([$field_1],7)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],7))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],7) <= [$field_2] && getMonth(addDays([$field_1],7)) != getMonth(addDays([$field_1],0)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],14))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],14))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],14) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],14))) + '年' + toString(getMonth(addDays([$field_1],14)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],14))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],14) <= [$field_2] && getMonth(addDays([$field_1],14)) != getMonth(addDays([$field_1],7)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],21))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],21))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],21) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],21))) + '年' + toString(getMonth(addDays([$field_1],21)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],21))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],21) <= [$field_2] && getMonth(addDays([$field_1],21)) != getMonth(addDays([$field_1],14)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],28))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],28))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],28) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],28))) + '年' + toString(getMonth(addDays([$field_1],28)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],28))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],28) <= [$field_2] && getMonth(addDays([$field_1],28)) != getMonth(addDays([$field_1],21)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],35))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],35))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],35) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],35))) + '年' + toString(getMonth(addDays([$field_1],35)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],35))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],35) <= [$field_2] && getMonth(addDays([$field_1],35)) != getMonth(addDays([$field_1],28)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],42))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],42))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],42) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],42))) + '年' + toString(getMonth(addDays([$field_1],42)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],42))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],42) <= [$field_2] && getMonth(addDays([$field_1],42)) != getMonth(addDays([$field_1],35)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],49))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],49))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],49) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],49))) + '年' + toString(getMonth(addDays([$field_1],49)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],49))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],49) <= [$field_2] && getMonth(addDays([$field_1],49)) != getMonth(addDays([$field_1],42)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],56))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],56))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],56) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],56))) + '年' + toString(getMonth(addDays([$field_1],56)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],56))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],56) <= [$field_2] && getMonth(addDays([$field_1],56)) != getMonth(addDays([$field_1],49)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],63))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],63))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],63) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],63))) + '年' + toString(getMonth(addDays([$field_1],63)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],63))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],63) <= [$field_2] && getMonth(addDays([$field_1],63)) != getMonth(addDays([$field_1],56)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],70))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],70))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],70) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],70))) + '年' + toString(getMonth(addDays([$field_1],70)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],70))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],70) <= [$field_2] && getMonth(addDays([$field_1],70)) != getMonth(addDays([$field_1],63)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],77))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],77))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],77) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],77))) + '年' + toString(getMonth(addDays([$field_1],77)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],77))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],77) <= [$field_2] && getMonth(addDays([$field_1],77)) != getMonth(addDays([$field_1],70)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],84))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],84))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],84) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],84))) + '年' + toString(getMonth(addDays([$field_1],84)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],84))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],84) <= [$field_2] && getMonth(addDays([$field_1],84)) != getMonth(addDays([$field_1],77)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],91))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],91))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],91) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],91))) + '年' + toString(getMonth(addDays([$field_1],91)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],91))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],91) <= [$field_2] && getMonth(addDays([$field_1],91)) != getMonth(addDays([$field_1],84)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],98))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],98))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],98) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],98))) + '年' + toString(getMonth(addDays([$field_1],98)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],98))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],98) <= [$field_2] && getMonth(addDays([$field_1],98)) != getMonth(addDays([$field_1],91)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],105))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],105))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],105) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],105))) + '年' + toString(getMonth(addDays([$field_1],105)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],105))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],105) <= [$field_2] && getMonth(addDays([$field_1],105)) != getMonth(addDays([$field_1],98)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],112))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],112))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],112) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],112))) + '年' + toString(getMonth(addDays([$field_1],112)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],112))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],112) <= [$field_2] && getMonth(addDays([$field_1],112)) != getMonth(addDays([$field_1],105)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],119))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],119))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],119) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],119))) + '年' + toString(getMonth(addDays([$field_1],119)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],119))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],119) <= [$field_2] && getMonth(addDays([$field_1],119)) != getMonth(addDays([$field_1],112)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],126))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],126))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],126) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],126))) + '年' + toString(getMonth(addDays([$field_1],126)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],126))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],126) <= [$field_2] && getMonth(addDays([$field_1],126)) != getMonth(addDays([$field_1],119)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],133))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],133))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],133) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],133))) + '年' + toString(getMonth(addDays([$field_1],133)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],133))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],133) <= [$field_2] && getMonth(addDays([$field_1],133)) != getMonth(addDays([$field_1],126)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],140))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],140))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],140) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],140))) + '年' + toString(getMonth(addDays([$field_1],140)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],140))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],140) <= [$field_2] && getMonth(addDays([$field_1],140)) != getMonth(addDays([$field_1],133)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],147))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],147))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],147) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],147))) + '年' + toString(getMonth(addDays([$field_1],147)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],147))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],147) <= [$field_2] && getMonth(addDays([$field_1],147)) != getMonth(addDays([$field_1],140)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],154))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],154))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],154) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],154))) + '年' + toString(getMonth(addDays([$field_1],154)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],154))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],154) <= [$field_2] && getMonth(addDays([$field_1],154)) != getMonth(addDays([$field_1],147)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],161))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],161))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],161) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],161))) + '年' + toString(getMonth(addDays([$field_1],161)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],161))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],161) <= [$field_2] && getMonth(addDays([$field_1],161)) != getMonth(addDays([$field_1],154)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],168))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],168))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],168) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],168))) + '年' + toString(getMonth(addDays([$field_1],168)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],168))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],168) <= [$field_2] && getMonth(addDays([$field_1],168)) != getMonth(addDays([$field_1],161)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],175))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],175))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],175) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],175))) + '年' + toString(getMonth(addDays([$field_1],175)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],175))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],175) <= [$field_2] && getMonth(addDays([$field_1],175)) != getMonth(addDays([$field_1],168)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toLocaleDateString(addDays([$field_1],182))",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],182))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "37px",
+                  "font-size": "10px",
+                  "font-weight": "500",
+                  "white-space": "nowrap",
+                  "padding-left": "3px",
+                  "border-left": "1px solid #99bad1",
+                  "height": "25px",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],182) <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=toString(getYear(addDays([$field_1],182))) + '年' + toString(getMonth(addDays([$field_1],182)) + 1) + '月'",
+                "style": {
+                  "position": "absolute",
+                  "left": "= (Number(addDays([$field_1],182))-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "top": "17px",
+                  "font-size": "12px",
+                  "font-weight": "700",
+                  "white-space": "nowrap",
+                  "color": "#ffffff",
+                  "display": "=if(addDays([$field_1],182) <= [$field_2] && getMonth(addDays([$field_1],182)) != getMonth(addDays([$field_1],175)), 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "='開始 ' + toLocaleDateString([$field_1])",
+                "style": {
+                  "position": "absolute",
+                  "left": "0",
+                  "top": "0",
+                  "font-size": "10px",
+                  "font-weight": "700",
+                  "color": "#d8efff",
+                  "background-color": "#174e74",
+                  "padding": "1px 4px"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "='終了 ' + toLocaleDateString([$field_2])",
+                "style": {
+                  "position": "absolute",
+                  "right": "0",
+                  "top": "0",
+                  "font-size": "10px",
+                  "font-weight": "700",
+                  "color": "#d8efff",
+                  "background-color": "#174e74",
+                  "padding": "1px 4px"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "='今日 ' + toLocaleDateString(@now)",
+                "style": {
+                  "position": "absolute",
+                  "top": "37px",
+                  "z-index": "90",
+                  "background-color": "#e11d48",
+                  "color": "#ffffff",
+                  "padding": "2px 4px",
+                  "font-size": "10px",
+                  "left": "= (Number(@now)-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "display": "=if(@now >= [$field_1] && @now <= [$field_2], 'block', 'none')"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elmType": "div",
+        "style": {
+          "width": "100%",
+          "display": "flex"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "style": {
+              "width": "220px",
+              "display": "flex",
+              "flex-wrap": "wrap"
+            },
+            "children": [
+              {
+                "elmType": "span",
+                "style": {
+                  "width": "24px",
+                  "padding": "6px 0",
+                  "text-align": "center",
+                  "cursor": "pointer"
+                },
+                "attributes": {
+                  "iconName": "=if([$field_5] >= 1, 'CompletedSolid', if([$field_5] > 0 , 'CortanaLogoReadyOuter', 'CircleRing'))",
+                  "title": "='Progress: ' + Number([$field_5] * 100) + '%'",
+                  "class": "= 'ms-fontSize-14 ms-fontColor-' + if([$field_5] >= 1, 'green', 'neutralSecondaryAlt')"
+                },
+                "customRowAction": {
+                  "action": "setValue",
+                  "actionInput": {
+                    "field_5": "=if([$field_5] == 0, if([$field_6] == 'Task' || [$field_6] == '', 0.25 , 1)  , if([$field_5] == 0.25 , 0.5, if([$field_5] == 0.50, 0.75, if([$field_5] == 0.75, 1, 0))))"
+                  }
+                }
+              },
+              {
+                "elmType": "button",
+                "txtContent": "[$Title]",
+                "customRowAction": {
+                  "action": "editProps"
+                },
+                "style": {
+                  "width": "196px",
+                  "height": "1.6em",
+                  "padding": "0.3em 0 0 0",
+                  "border": "none",
+                  "background-color": "transparent",
+                  "cursor": "pointer",
+                  "text-decoration": "none",
+                  "text-align": "left",
+                  "outline": "none",
+                  "display": "inline-block",
+                  "overflow": "hidden",
+                  "text-overflow": "ellipsis",
+                  "white-space": "nowrap"
+                },
+                "attributes": {
+                  "title": "[$Title]",
+                  "class": "ms-fontSize-14 ms-fontWeight-semibold ms-fontColor-gray140 ms-fontColor-black--hover"
+                }
+              },
+              {
+                "elmType": "span",
+                "style": {
+                  "width": "24px",
+                  "padding": "1px 0 0 0",
+                  "text-align": "center"
+                },
+                "attributes": {
+                  "iconName": "=if( ( ([$field_6] == 'Task' || [$field_6] == '') && [$field_4]< @now && [$field_5] < 1 ) || ([$field_6] == 'Milestone' && [$field_3]< @now && [$field_5] < 1 )  , 'EventDateMissed12', '')",
+                  "title": "This task is running late!",
+                  "class": "='ms-fontSize-14 ms-fontColor-' + if([$field_4]< @now && [$field_5] < 1, 'sharedRed20', 'themePrimary')"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "='開始 ' + toLocaleDateString([$field_3])",
+                "style": {
+                  "width": "96px",
+                  "padding": "0.1em 0",
+                  "text-align": "center",
+                  "heigth": "1.4em",
+                  "border-radius": "12px",
+                  "margin": "0 2px 0 0 ",
+                  "font-size": "11px",
+                  "color": "#2563eb"
+                },
+                "attributes": {
+                  "class": "ms-fontSize-12 ms-bgColor-neutralLight"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "='終了 ' + toLocaleDateString([$field_4])",
+                "style": {
+                  "width": "96px",
+                  "padding": "0.1em 0",
+                  "text-align": "center",
+                  "border-radius": "12px",
+                  "margin": "0 2px 0 0 ",
+                  "font-size": "11px",
+                  "color": "#b45309"
+                },
+                "attributes": {
+                  "class": "ms-fontSize-12 ms-bgColor-neutralLight"
+                }
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "flex-grow": "1",
+              "position": "relative",
+              "height": "3.3em",
+              "padding": "0.3em 0 0 0",
+              "min-width": "0"
+            },
+            "children": [
+              {
+                "elmType": "span",
+                "style": {
+                  "position": "absolute",
+                  "border-left": "2px solid #e11d48",
+                  "height": "52px",
+                  "z-index": "1",
+                  "left": "= (Number(@now)-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100 + '%'",
+                  "display": "=if(@now >= [$field_1] && @now <= [$field_2], 'block', 'none')"
+                }
+              },
+              {
+                "elmType": "div",
+                "style": {
+                  "position": "absolute",
+                  "box-sizing": "border-box",
+                  "display": "=if([$field_6] == 'Task' || [$field_6] == '' , 'flex', 'none')",
+                  "border-radius": "6px",
+                  "z-index": "10",
+                  "top": "3px",
+                  "height": "25px",
+                  "overflow": "hidden",
+                  "text-overflow": "ellipsis",
+                  "border": "1px solid",
+                  "border-color": "= if(if(Number([$field_5]) > 1, Number([$field_5]) / 100, Number([$field_5])) >= 1,'#16a34a',if([$field_4] < @now,'#dc2626',if(indexOf([$Title],'要件')>=0,'#2563eb',if(indexOf([$Title],'設計')>=0,'#8b5cf6',if(indexOf([$Title],'開発')>=0,'#0891b2',if(indexOf([$Title],'テスト')>=0,'#f59e0b',if(indexOf([$Title],'リリース')>=0,'#059669','#64748b')))))))",
+                  "background-color": "#f1f5f9",
+                  "left": "=  (Number([$field_3])-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100  + '%'",
+                  "width": "= if( [$field_4] > [$field_2],  (Number([$field_2])-Number([$field_3])+ 86400000) / (Number([$field_2])-Number([$field_1])+ 86400000) * 100  ,  (Number([$field_4])-Number([$field_3])+ 86400000) / (Number([$field_2])-Number([$field_1])+ 86400000) * 100 ) + '%'"
+                }
+              },
+              {
+                "elmType": "div",
+                "style": {
+                  "position": "absolute",
+                  "box-sizing": "border-box",
+                  "display": "=if(([$field_6] == 'Task' || [$field_6] == '') && if(Number([$field_5]) > 1, Number([$field_5]) / 100, Number([$field_5])) > 0, 'flex', 'none')",
+                  "border-radius": "=if( [$field_5] < 1, '6px 0 0 6px', '6px')",
+                  "z-index": "20",
+                  "top": "3px",
+                  "height": "25px",
+                  "overflow": "hidden",
+                  "text-overflow": "ellipsis",
+                  "border": "1px solid",
+                  "border-color": "= if(if(Number([$field_5]) > 1, Number([$field_5]) / 100, Number([$field_5])) >= 1,'#16a34a',if([$field_4] < @now,'#dc2626',if(indexOf([$Title],'要件')>=0,'#2563eb',if(indexOf([$Title],'設計')>=0,'#8b5cf6',if(indexOf([$Title],'開発')>=0,'#0891b2',if(indexOf([$Title],'テスト')>=0,'#f59e0b',if(indexOf([$Title],'リリース')>=0,'#059669','#64748b')))))))",
+                  "background-color": "= if(if(Number([$field_5]) > 1, Number([$field_5]) / 100, Number([$field_5])) >= 1,'#16a34a',if([$field_4] < @now,'#dc2626',if(indexOf([$Title],'要件')>=0,'#2563eb',if(indexOf([$Title],'設計')>=0,'#8b5cf6',if(indexOf([$Title],'開発')>=0,'#0891b2',if(indexOf([$Title],'テスト')>=0,'#f59e0b',if(indexOf([$Title],'リリース')>=0,'#059669','#64748b')))))))",
+                  "left": "=  (Number([$field_3])-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100  + '%'",
+                  "width": "= if( [$field_4] > [$field_2],  ((Number([$field_2])-Number([$field_3])+ 86400000) / (Number([$field_2])-Number([$field_1])+ 86400000) * 100) * (if(Number([$field_5]) > 1, Number([$field_5]) / 100, Number([$field_5]))) + '%'  ,  ((Number([$field_4])-Number([$field_3])+ 86400000) / (Number([$field_2])-Number([$field_1])+ 86400000) * 100 * (if(Number([$field_5]) > 1, Number([$field_5]) / 100, Number([$field_5])))) + '%'"
+                },
+                "attributes": {
+                  "class": "sp-field-bold",
+                  "title": "=[$Title] + ' - ' + toLocaleDateString([$field_3]) + ' - ' + toLocaleDateString([$field_4])"
+                }
+              },
+              {
+                "elmType": "div",
+                "style": {
+                  "position": "absolute",
+                  "box-sizing": "border-box",
+                  "border-radius": "6px",
+                  "z-index": "50",
+                  "top": "3px",
+                  "height": "25px",
+                  "overflow": "hidden",
+                  "text-overflow": "ellipsis",
+                  "border": "=if([$field_4]< @now && [$field_5] < 1 && ([$field_6] == 'Task' || [$field_6] == '' ), '2px solid #f8b7bd', 'none')",
+                  "left": "=  (Number([$field_3])-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100  + '%'",
+                  "width": "=if([$field_6] == 'Milestone', '28px' ,  if( [$field_4] > [$field_2],  (Number([$field_2])-Number([$field_3])+ 86400000) / (Number([$field_2])-Number([$field_1])+ 86400000) * 100  ,  (Number([$field_4])-Number([$field_3])+ 86400000) / (Number([$field_2])-Number([$field_1])+ 86400000) * 100 ) + '%'",
+                  "margin-left": "=if([$field_6] == 'Milestone', '-14px' , 0"
+                },
+                "customCardProps": {
+                  "openOnEvent": "hover",
+                  "directionalHint": "bottomCenter",
+                  "isBeakVisible": true,
+                  "beakStyle": {
+                    "backgroundColor": "white"
+                  },
+                  "formatter": {
+                    "elmType": "div",
+                    "style": {
+                      "max-height": "256px",
+                      "width": "282px",
+                      "display": "flex",
+                      "flex-wrap": "wrap",
+                      "align-items": "flex-start"
+                    },
+                    "attributes": {
+                      "class": "ms-ContextualMenu-list is-open list-436"
+                    },
+                    "children": [
+                      {
+                        "elmType": "div",
+                        "txtContent": "[$Title]",
+                        "style": {
+                          "width": "250px",
+                          "height": "40px",
+                          "padding": "4px 4px 0 4px",
+                          "overflow": "hidden",
+                          "text-overflow": "ellipsis"
+                        },
+                        "attributes": {
+                          "class": "ms-fontSize-14 ms-bgColor-themeLight ms-fontWeight-semibold ms-fontColor-gray160"
+                        }
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "width": "12",
+                          "flex-grow": "1",
+                          "height": "34px",
+                          "padding": "10px 0 0 0 ",
+                          "text-align": "center",
+                          "cursor": "pointer"
+                        },
+                        "attributes": {
+                          "iconName": "Edit",
+                          "class": "ms-fontSize-14 ms-bgColor-themeLight  ms-fontColor-gray160"
+                        },
+                        "customRowAction": {
+                          "action": "editProps"
+                        }
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "width": "100%",
+                          "display": "flex",
+                          "flex-wrap": "wrap",
+                          "align-items": "flex-start",
+                          "margin": "2px 0"
+                        },
+                        "children": [
+                          {
+                            "elmType": "div",
+                            "style": {
+                              "width": "24px",
+                              "padding": "6px 0",
+                              "text-align": "center",
+                              "heigth": "1.4em"
+                            },
+                            "attributes": {
+                              "iconName": "Timeline"
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "txtContent": "0%",
+                            "style": {
+                              "padding": "2px 6px",
+                              "text-align": "center",
+                              "border-radius": "14px",
+                              "margin": "2px 2px 0 0 ",
+                              "cursor": "pointer",
+                              "heigth": "1.4em"
+                            },
+                            "attributes": {
+                              "class": "='ms-fontSize-14  ms-bgColor-themeLight--hover ms-fontColor-themeDarker--hover ms-bgColor-' + if([$field_5] == 0, 'themeTertiary', 'neutralLight')"
+                            },
+                            "customRowAction": {
+                              "action": "setValue",
+                              "actionInput": {
+                                "field_5": "0.0"
+                              }
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "txtContent": "25%",
+                            "style": {
+                              "padding": "2px 6px",
+                              "text-align": "center",
+                              "border-radius": "14px",
+                              "margin": "2px 2px 0 0 ",
+                              "cursor": "pointer",
+                              "heigth": "1.4em"
+                            },
+                            "attributes": {
+                              "class": "='ms-fontSize-14  ms-bgColor-themeLight--hover ms-fontColor-themeDarker--hover ms-bgColor-' + if([$field_5] == 0.25, 'themeTertiary', 'neutralLight')"
+                            },
+                            "customRowAction": {
+                              "action": "setValue",
+                              "actionInput": {
+                                "field_5": "0.25"
+                              }
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "txtContent": "50%",
+                            "style": {
+                              "padding": "2px 6px",
+                              "text-align": "center",
+                              "border-radius": "14px",
+                              "margin": "2px 2px 0 0 ",
+                              "cursor": "pointer",
+                              "heigth": "1.4em"
+                            },
+                            "attributes": {
+                              "class": "='ms-fontSize-14  ms-bgColor-themeLight--hover ms-fontColor-themeDarker--hover ms-bgColor-' + if([$field_5] == 0.5, 'themeTertiary', 'neutralLight')"
+                            },
+                            "customRowAction": {
+                              "action": "setValue",
+                              "actionInput": {
+                                "field_5": "0.5"
+                              }
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "txtContent": "75%",
+                            "style": {
+                              "padding": "2px 6px",
+                              "text-align": "center",
+                              "border-radius": "14px",
+                              "margin": "2px 2px 0 0 ",
+                              "cursor": "pointer",
+                              "heigth": "1.4em"
+                            },
+                            "attributes": {
+                              "class": "='ms-fontSize-14  ms-bgColor-themeLight--hover ms-fontColor-themeDarker--hover ms-bgColor-' + if([$field_5] == 0.75, 'themeTertiary', 'neutralLight')"
+                            },
+                            "customRowAction": {
+                              "action": "setValue",
+                              "actionInput": {
+                                "field_5": "0.75"
+                              }
+                            }
+                          },
+                          {
+                            "elmType": "div",
+                            "txtContent": "100%",
+                            "style": {
+                              "padding": "2px 6px",
+                              "text-align": "center",
+                              "border-radius": "14px",
+                              "margin": "2px 2px 0 0 ",
+                              "cursor": "pointer",
+                              "heigth": "1.4em"
+                            },
+                            "attributes": {
+                              "class": "='ms-fontSize-14  ms-bgColor-themeLight--hover ms-fontColor-themeDarker--hover ms-bgColor-' + if([$field_5] == 1, 'themeTertiary', 'neutralLight')"
+                            },
+                            "customRowAction": {
+                              "action": "setValue",
+                              "actionInput": {
+                                "field_5": "1.0"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "width": "24px",
+                          "display": "=if( ( ([$field_6] == 'Task' || [$field_6] == '') && [$field_4]< @now && [$field_5] < 1 ) || ([$field_6] == 'Milestone' && [$field_3]< @now && [$field_5] < 1 ) , 'block', 'none')",
+                          "padding": "6px 0 7px 0",
+                          "text-align": "center",
+                          "heigth": "1.4em",
+                          "margin": "2px 0"
+                        },
+                        "attributes": {
+                          "iconName": "EventDateMissed12",
+                          "class": "sp-field-severity--blocked30 ms-fontSize-14 ms-fontColor-sharedRed20"
+                        }
+                      },
+                      {
+                        "elmType": "div",
+                        "txtContent": "This task is running late!",
+                        "style": {
+                          "width": "254px",
+                          "display": "=if( ( ([$field_6] == 'Task' || [$field_6] == '') && [$field_4]< @now && [$field_5] < 1 ) || ([$field_6] == 'Milestone' && [$field_3]< @now && [$field_5] < 1 ) , 'block', 'none')",
+                          "padding": "4px 0 4px 4px",
+                          "text-align": "left",
+                          "heigth": "1.4em",
+                          "margin": "2px 0"
+                        },
+                        "attributes": {
+                          "class": "sp-field-severity--blocked30 ms-fontSize-14 ms-fontColor-sharedRed20"
+                        }
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "width": "24px",
+                          "padding": "6px 0",
+                          "text-align": "center",
+                          "heigth": "1.4em"
+                        },
+                        "attributes": {
+                          "iconName": "Calendar"
+                        }
+                      },
+                      {
+                        "elmType": "div",
+                        "txtContent": "=toLocaleDateString([$field_3])",
+                        "style": {
+                          "width": "127px",
+                          "padding": "2px 0",
+                          "text-align": "center",
+                          "border-radius": "14px",
+                          "margin": "2px 2px 0 0 ",
+                          "height": "1.4em"
+                        },
+                        "attributes": {
+                          "class": "ms-fontSize-14 ms-bgColor-neutralLight"
+                        }
+                      },
+                      {
+                        "elmType": "div",
+                        "txtContent": "=toLocaleDateString([$field_4])",
+                        "style": {
+                          "width": "127px",
+                          "padding": "2px 0",
+                          "text-align": "center",
+                          "border-radius": "14px",
+                          "margin": "2px 2px 0 0 ",
+                          "height": "1.4em"
+                        },
+                        "attributes": {
+                          "class": "ms-fontSize-14 ms-bgColor-neutralLight"
+                        }
+                      },
+                      {
+                        "elmType": "div",
+                        "style": {
+                          "width": "24px",
+                          "padding": "6px 0",
+                          "text-align": "center",
+                          "heigth": "1.4em"
+                        },
+                        "attributes": {
+                          "iconName": "Contact",
+                          "title": "='Assigned to : ' + [$field_7.title]"
+                        }
+                      },
+                      {
+                        "elmType": "div",
+                        "txtContent": "[$field_7.title]",
+                        "style": {
+                          "width": "254px",
+                          "padding": "4px 0 4px 4px"
+                        },
+                        "defaultHoverField": "[$field_7]"
+                      },
+                      {
+                        "elmType": "div",
+                        "txtContent": "[$field_8]",
+                        "style": {
+                          "font-style": "italic",
+                          "width": "254px",
+                          "padding": "4px 0 4px 4px"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "elmType": "div",
+                "style": {
+                  "position": "absolute",
+                  "left": "=  (Number([$field_3])-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100  + '%'",
+                  "width": "= if( [$field_4] > [$field_2],  (Number([$field_2])-Number([$field_3])+ 86400000) / (Number([$field_2])-Number([$field_1])+ 86400000) * 100  ,  (Number([$field_4])-Number([$field_3])+ 86400000) / (Number([$field_2])-Number([$field_1])+ 86400000) * 100 ) + '%'",
+                  "top": "3px",
+                  "height": "25px",
+                  "display": "=if([$field_6] == 'Task' || [$field_6] == '', 'flex','none')",
+                  "box-sizing": "border-box",
+                  "align-items": "center",
+                  "justify-content": "space-between",
+                  "gap": "3px",
+                  "padding": "0 5px",
+                  "z-index": "70",
+                  "pointer-events": "none",
+                  "overflow": "visible"
+                },
+                "children": [
+                  {
+                    "elmType": "span",
+                    "txtContent": "[$Title]",
+                    "style": {
+                      "font-size": "11px",
+                      "font-weight": "600",
+                      "color": "#0f172a",
+                      "white-space": "nowrap",
+                      "overflow": "hidden",
+                      "text-overflow": "ellipsis",
+                      "min-width": "0",
+                      "flex-grow": "1"
+                    }
+                  },
+                  {
+                    "elmType": "span",
+                    "txtContent": "=floor(if(Number([$field_5]) > 1, Number([$field_5]) / 100, Number([$field_5])) * 100 + 0.5) + '%'",
+                    "style": {
+                      "font-size": "11px",
+                      "font-weight": "700",
+                      "color": "#0f172a",
+                      "white-space": "nowrap",
+                      "flex-shrink": "0",
+                      "background-color": "#ffffffdd",
+                      "border-radius": "3px",
+                      "padding": "0 2px"
+                    }
+                  }
+                ]
+              },
+              {
+                "elmType": "div",
+                "style": {
+                  "position": "absolute",
+                  "left": "=  (Number([$field_3])-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100  + '%'",
+                  "width": "= if( [$field_4] > [$field_2],  (Number([$field_2])-Number([$field_3])+ 86400000) / (Number([$field_2])-Number([$field_1])+ 86400000) * 100  ,  (Number([$field_4])-Number([$field_3])+ 86400000) / (Number([$field_2])-Number([$field_1])+ 86400000) * 100 ) + '%'",
+                  "top": "29px",
+                  "height": "17px",
+                  "display": "=if([$field_6] == 'Task' || [$field_6] == '', 'flex','none')",
+                  "box-sizing": "border-box",
+                  "justify-content": "space-between",
+                  "align-items": "center",
+                  "overflow": "visible",
+                  "pointer-events": "none",
+                  "z-index": "65"
+                },
+                "children": [
+                  {
+                    "elmType": "span",
+                    "txtContent": "='開始 '+toString(getMonth([$field_3])+1)+'/'+toString(getDate([$field_3]))",
+                    "style": {
+                      "font-size": "10px",
+                      "white-space": "nowrap",
+                      "color": "#1d4ed8",
+                      "font-weight": "600"
+                    }
+                  },
+                  {
+                    "elmType": "span",
+                    "txtContent": "='終了 '+toString(getMonth([$field_4])+1)+'/'+toString(getDate([$field_4]))",
+                    "style": {
+                      "font-size": "10px",
+                      "white-space": "nowrap",
+                      "color": "#9a3412",
+                      "font-weight": "600"
+                    }
+                  }
+                ]
+              },
+              {
+                "elmType": "div",
+                "style": {
+                  "position": "relative",
+                  "box-sizing": "border-box",
+                  "display": "=if([$field_6] == 'Milestone', 'flex', 'none')",
+                  "z-index": "10",
+                  "top": "0.3em",
+                  "height": "3em",
+                  "left": "=  (Number([$field_3])-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100  + '%'",
+                  "margin-left": "-14px",
+                  "width": "28px"
+                },
+                "attributes": {
+                  "iconName": "=if([$field_3]< @now && [$field_5] < 1, 'EventDateMissed12', 'EventDate'",
+                  "title": "=[$Title] + ' - ' + toLocaleDateString([$field_3]) ",
+                  "class": "='ms-fontSize-24 ' + if([$field_3]< @now && [$field_5] < 1, 'ms-fontColor-sharedRed20', 'ms-fontColor-themePrimary') "
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "=getDate([$field_3]) + '-' +  if(getMonth([$field_3])==0,'Jan',if(getMonth([$field_3])==1,'Feb',if(getMonth([$field_3])==2,'Mar',if(getMonth([$field_3])==3,'Apr',if(getMonth([$field_3])==4,'May',if(getMonth([$field_3])==5,'Jun',if(getMonth([$field_3])==6,'Jul',if(getMonth([$field_3])==7,'Aug',if(getMonth([$field_3])==8,'Sep',if(getMonth([$field_3])==9,'Oct',if(getMonth([$field_3])==10,'Nov',if(getMonth([$field_3])==11,'Dec',''))))))))))))",
+                "style": {
+                  "position": "absolute",
+                  "box-sizing": "border-box",
+                  "display": "=if([$field_6] == 'Milestone'  , 'flex', 'none')",
+                  "z-index": "3",
+                  "top": "10px",
+                  "height": "24px",
+                  "margin-left": "-60px",
+                  "left": "=  (Number([$field_3])-Number([$field_1])) / (Number([$field_2])-Number([$field_1])) * 100  + '%'",
+                  "width": "60px",
+                  "text-align": "right"
+                },
+                "attributes": {
+                  "class": "sp-field-bold ms-fontSize-14"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
